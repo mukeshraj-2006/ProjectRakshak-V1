@@ -3,7 +3,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const path = require('path');
 const http = require('http');
-const os = require('os'); // <-- NEW: To find the local IP address
+const os = require('os');
 
 // --- Middleware & Session ---
 const session = require('express-session');
@@ -21,7 +21,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "*", // Allow all origins for simplicity in development
+        origin: "*", 
         methods: ["GET", "POST"]
     }
 });
